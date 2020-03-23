@@ -22,6 +22,7 @@ class LoginPage
     {
         const btnSubmit=cy.get('[type=submit]')
         btnSubmit.click()
+        cy.wait(15000)
 
     }
 
