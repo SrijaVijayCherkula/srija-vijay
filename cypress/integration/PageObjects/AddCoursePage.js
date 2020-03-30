@@ -78,7 +78,7 @@ class AddCoursePage
          btnNewSection.click()
          cy.wait(11000)
      }
-     clkHome()
+    /* clkHome()
      {
          const lnkHome=cy.get('ul.right')
          lnkHome.should('be.enabled').click()
@@ -89,7 +89,7 @@ class AddCoursePage
          const verifySection=cy.get('a.section-name-js')
          verifySection.contains('a.section-name-js', 'Section_20032020').should('be.visible')
 
-     }
+     }*/
 
 }
 

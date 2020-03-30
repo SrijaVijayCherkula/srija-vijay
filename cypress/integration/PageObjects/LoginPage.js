@@ -2,7 +2,7 @@ class LoginPage
 {
     visit()
     {
-        cy.visit("https://connectqalv.mheducation.com/connect/hmInstructorSectionHomePortal.do")
+        cy.visit("https://connectqalv.mheducation.com/connect/hmInstructorSectionHomePortal.do",{timeout:60000})
     }
     typeUserName(value)
     {

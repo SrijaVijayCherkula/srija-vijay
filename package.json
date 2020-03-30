@@ -3,12 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:repo":"del cypress/reports/mocha",
+    "test": "cypress run --spec cypress/integration/ConnectQaLv/ConnectQALive.spec.js",
+    "merge-report":"mochawesome-merge --reportDir cypress/reports/mocha > cypress/mochareports/report.json",
+    "generate-report": "marge cypress/mochareports/report.json -f report -o cypress/mochareports",
+    "after:tests": "npm run merge-report; npm run generate-report",
+    "cypress": "npm run clean-reports; npm run test; npm run after:tests"
   },
   "author": "Srija",
   "license": "ISC",
   "description": "",
-  "devDependencies": {
+  "dependencies": {
     "cypress": "^4.2.0"
+  },
+  "devDependencies": {
+    
+    "cypress-file-upload": "^4.0.4",
+    "cypress-multi-reporters": "^1.2.4",
+    "mocha": "^7.1.1",
+    "mochawesome": "^5.0.0",
+    "mochawesome-merge": "^4.0.3",
+    "mochawesome-report-generator": "^4.1.0"
   }
+  
 }

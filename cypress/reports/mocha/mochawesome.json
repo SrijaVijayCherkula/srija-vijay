@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-03-30T07:17:08.591Z",
+    "end": "2020-03-30T07:20:55.666Z",
+    "duration": 227075,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6b95156b-8c57-4024-aa32-71824da6fccb",
+      "title": "",
+      "fullFile": "cypress\\integration\\ConnectQaLv\\ConnectQALive.spec.js",
+      "file": "cypress\\integration\\ConnectQaLv\\ConnectQALive.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0ad6a92a-8e04-4d06-97d1-e24cae778ff0",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Launch Connect QALive",
+              "fullTitle": "MyTestSuite Launch Connect QALive",
+              "timedOut": null,
+              "duration": 8368,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://connectqalv.mheducation.com/connect/hmInstructorSectionHomePortal.do\"); //visit url\ncy.title().should('eq', 'McGraw-Hill Connect'); //verifying title",
+              "err": {},
+              "uuid": "406cc058-28c1-48f9-8497-32d47a03dfa6",
+              "parentUUID": "0ad6a92a-8e04-4d06-97d1-e24cae778ff0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login to Connect QALive",
+              "fullTitle": "MyTestSuite Login to Connect QALive",
+              "timedOut": null,
+              "duration": 7320,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('input[name=userName]').should('be.visible').should('be.enabled').type(\"deva3ins@live.com\"); //entering User Name\ncy.get('input[name=password]').should('be.visible').should('be.enabled').type(\"123456\"); //entering password\ncy.get('#signinForm').submit();",
+              "err": {},
+              "uuid": "ee749c6e-fdb6-4563-9e8f-930f4e5d1702",
+              "parentUUID": "0ad6a92a-8e04-4d06-97d1-e24cae778ff0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add Course",
+              "fullTitle": "MyTestSuite Add Course",
+              "timedOut": null,
+              "duration": 198836,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://connectqalv.mheducation.com/connect/hmInstructorSectionHomePortal.do\"); //visit url\ncy.get('input[name=userName]').should('be.visible').should('be.enabled').type(\"deva3ins@live.com\"); //entering User Name\ncy.get('input[name=password]').should('be.visible').should('be.enabled').type(\"123456\"); //entering password\ncy.get('#signinForm').submit();\ncy.wait(15000);\ncy.get('#addCourse').should('be.visible').click();\ncy.wait(5000);\ncy.title().should('eq', 'McGraw-Hill Connect | Add My Course | Select Course');\ncy.get('[class=\"form-control mgh-courseSearch-textbox\"]').should('be.enabled').click().type(\"Economics\"); //entering ISBN\ncy.get('[class=\"mgh-courseSearch-button enable-button\"]').should('be.enabled').click(); //click search button\ncy.get('[value=\"0073273163\"]').should('be.visible').click();\ncy.wait(11000);\ncy.get(':nth-child(7) > .row-width-12 > .row-width-2 > .btn').should('be.visible').should('be.enabled').click();\ncy.get('input[name=crsName1]').should('be.visible').should('be.enabled').type(\"Course_20032020\");\ncy.get('input[name=sectionName]').should('be.visible').should('be.enabled').type(\"Section_20032020\");\ncy.get('#create-button').should('be.visible').click();\ncy.wait(11000);\ncy.title().should('eq', 'McGraw-Hill Connect | My Course Created'); //cy.get('[class=\"buttons btbl sectionhome-button\"]').should('eq','Continue to section home').click() //click continue to section homepage\n//cy.title().should('eq','McGraw-Hill Connect | section123') \n// cy.get('[class=\"icon-plus\"]').should('be.visible').click() //click continue to section homepage",
+              "err": {},
+              "uuid": "5e8aa36c-e955-4e05-87ce-53fa7a9ddab4",
+              "parentUUID": "0ad6a92a-8e04-4d06-97d1-e24cae778ff0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "406cc058-28c1-48f9-8497-32d47a03dfa6",
+            "ee749c6e-fdb6-4563-9e8f-930f4e5d1702",
+            "5e8aa36c-e955-4e05-87ce-53fa7a9ddab4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 214524,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
