@@ -30,7 +30,7 @@ describe('MyTestSuite', function()
         cy.get('input[name=sectionName]').should('be.visible').should('be.enabled').type("Section_20032020")
         cy.get('#create-button').should('be.visible').click()
         cy.wait(11000)
-        cy.title().should('eq','McGraw-Hill Connect | My Course Created') 
+        cy.title().should('eq','jlfhlesf') 
         //cy.get('[class="buttons btbl sectionhome-button"]').should('eq','Continue to section home').click() //click continue to section homepage
         //cy.title().should('eq','McGraw-Hill Connect | section123') 
        // cy.get('[class="icon-plus"]').should('be.visible').click() //click continue to section homepage
