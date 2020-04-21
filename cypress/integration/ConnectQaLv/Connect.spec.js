@@ -1,11 +1,11 @@
-import LoginPage from '../PageObjects/LoginPage'
-import AddCoursePage from '../PageObjects/AddCoursePage'
+import LoginPage from '../../PageObjects/LoginPage'
+import AddCoursePage from '../../PageObjects/AddCoursePage'
 
 
 describe('TestSuite', function() 
 {
   beforeEach('Connect', function(){
-    cy.fixture('data').then(function(data){
+    cy.fixture('invaliddata').then(function(data){
         this.data=data
     })
   })
@@ -30,7 +30,7 @@ describe('TestSuite', function()
        acp.clkContinuetoCoursePage()
        acp.clkNewSection()
       // acp.clkHome()
-      // acp.validateSection()
+      acp.validateSection(this.data.sectionname)
     })
     Cypress.on('uncaught:exception', (err, runnable) => {
         // returning false here prevents Cypress from

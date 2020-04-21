@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-20T10:59:52.178Z",
+    "end": "2020-04-20T11:02:41.897Z",
+    "duration": 169719,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "601520d2-9452-4614-82cc-37290a468bec",
+      "title": "",
+      "fullFile": "cypress\\integration\\ConnectQaLv\\Connect1.spec.js",
+      "file": "cypress\\integration\\ConnectQaLv\\Connect1.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d81bddb3-b10b-46f8-a196-647df08dd8e4",
+          "title": "TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login to Connect QALive",
+              "fullTitle": "TestSuite Login to Connect QALive",
+              "timedOut": null,
+              "duration": 162592,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var lp = new _LoginPage[\"default\"]();\nvar acp = new _AddCoursePage[\"default\"]();\ncy.login(this.data.email, this.data.password);\ncy.addCourse(this.data.book, this.data.coursename, this.data.sectionname);",
+              "err": {},
+              "uuid": "56380fbc-41fa-4cc5-8dea-e05ea4e0ffc4",
+              "parentUUID": "d81bddb3-b10b-46f8-a196-647df08dd8e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56380fbc-41fa-4cc5-8dea-e05ea4e0ffc4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 162592,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

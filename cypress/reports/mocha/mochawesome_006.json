@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-04-20T10:53:57.490Z",
+    "end": "2020-04-20T10:56:47.193Z",
+    "duration": 169703,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46d7466e-bdaf-4d8e-b2d8-111f008f8737",
+      "title": "",
+      "fullFile": "cypress\\integration\\ConnectQaLv\\Connect.spec.js",
+      "file": "cypress\\integration\\ConnectQaLv\\Connect.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39db75d4-19ad-47b7-bd4a-a0ec6b8f4f2c",
+          "title": "TestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login to Connect QALive",
+              "fullTitle": "TestSuite Login to Connect QALive",
+              "timedOut": null,
+              "duration": 157124,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var lp = new _LoginPage[\"default\"]();\nvar acp = new _AddCoursePage[\"default\"]();\nlp.visit();\nlp.typeUserName(this.data.email);\nlp.typePassword(this.data.password);\nlp.clkSubmit();\nacp.clkAddCourse();\nacp.typeIsbn(this.data.book);\nacp.clkSearch();\nacp.clkISBN();\nacp.selectBundle();\nacp.typeCourseName(this.data.coursename);\nacp.typeSectionName(this.data.sectionname);\nacp.clkCreateCourse();\nacp.validate();\nacp.clkContinuetoCoursePage();\nacp.clkNewSection(); // acp.clkHome()\nacp.validateSection(this.data.sectionname);",
+              "err": {},
+              "uuid": "7850bebc-1662-45fd-9eca-64927b3bbe18",
+              "parentUUID": "39db75d4-19ad-47b7-bd4a-a0ec6b8f4f2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7850bebc-1662-45fd-9eca-64927b3bbe18"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 157124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.1.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "5.0.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

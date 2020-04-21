@@ -17,7 +17,7 @@ class AddCoursePage
     }
     clkSearch()
     {
-        const btnSearch=cy.get('[class="mgh-courseSearch-button enable-button"]')
+        const btnSearch=cy.get('.mgh-courseSearch-button')
         btnSearch.should('be.enabled')
         btnSearch.click()
     }
@@ -74,7 +74,7 @@ class AddCoursePage
      }
      clkNewSection()
      {
-         const btnNewSection=cy.get('#continue_section')
+         const btnNewSection=cy.get('#continue_section > a > div')
          btnNewSection.click()
          cy.wait(11000)
      }
@@ -83,13 +83,13 @@ class AddCoursePage
          const lnkHome=cy.get('ul.right')
          lnkHome.should('be.enabled').click()
          cy.wait(10000)
-     }
-     validateSection()
-     {
-         const verifySection=cy.get('a.section-name-js')
-         verifySection.contains('a.section-name-js', 'Section_20032020').should('be.visible')
-
      }*/
+     validateSection(value)
+     {
+         const verifySection=cy.get('.sectionName')
+         verifySection.contains('.sectionName',value).should('be.visible')
+
+     }
 
 }
 

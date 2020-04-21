@@ -1,0 +1,6 @@
+{
+    "url":"https://connectqalv.mheducation.com/connect/hmInstructorSectionHomePortal.do",
+    "txtUserName":"input[name=userName]",
+    "txtPassword":"input[name=password]",
+     "btnSubmit":"[type=submit]"
+}
